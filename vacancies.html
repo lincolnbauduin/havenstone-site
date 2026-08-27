@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Available homes — Havenstone Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root{--ink:#1B2A33;--muted:#5E7280;--line:#DDE4E8;--paper:#FBFAF8;--sand:#F1EDE6;--brass:#A9743C;--deep:#12333B}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);background:#fff}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{font-family:"Source Serif 4",Georgia,serif;font-size:21px;font-weight:600}
+  .brand span{color:var(--brass)}
+  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+  nav a{text-decoration:none;color:var(--muted)}
+  nav a[aria-current]{color:var(--ink);font-weight:600}
+  h1{font-family:"Source Serif 4",Georgia,serif;font-size:36px;font-weight:600;margin:44px 0 6px}
+  .sub{color:var(--muted);margin:0 0 34px}
+  .listings{display:grid;gap:18px;padding-bottom:56px}
+  .listing{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 24px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}
+  .listing h2{font-family:"Source Serif 4",Georgia,serif;font-size:21px;margin:0 0 4px;font-weight:600}
+  .meta{color:var(--muted);font-size:15px;margin:0}
+  .feat{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .feat li{font-size:13px;background:var(--sand);border-radius:2px;padding:4px 9px;color:#43555F}
+  .price{text-align:right;white-space:nowrap}
+  .price b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:25px;font-weight:600}
+  .price small{color:var(--muted);font-size:13px}
+  .apply{display:inline-block;margin-top:10px;background:var(--brass);color:#fff;text-decoration:none;padding:9px 16px;border-radius:3px;font-size:14px;font-weight:600}
+  .note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--brass);border-radius:3px;padding:16px 20px;color:var(--muted);font-size:15px;margin-bottom:26px}
+  footer{background:var(--sand);padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <div class="brand">Havenstone<span>.</span></div>
+  <ul>
+    <li><a href="vacancies.html" aria-current="page">Vacancies (4)</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="index.html#owners">For owners</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav></div></header>
+
+<div class="wrap">
+  <h1>Available homes</h1>
+  <p class="sub">Four homes available across the portfolio. Updated as units come to market.</p>
+
+  <div class="note">Applications are reviewed in the order received. A <strong>$45</strong> application fee applies per adult applicant.</div>
+
+  <div class="listings">
+
+    <article class="listing">
+      <div>
+        <h2>Camelback Terrace — 2 bed, 2 bath</h2>
+        <p class="meta">Unit 4C · 1,080 sq ft · Phoenix, AZ · available now</p>
+        <ul class="feat"><li>Covered parking</li><li>In-unit laundry</li><li>Pool access</li><li>Pets under 30lb</li></ul>
+      </div>
+      <div class="price"><b>$1,895</b><small>per month</small><br><a class="apply" href="#">Apply</a></div>
+    </article>
+
+    <article class="listing">
+      <div>
+        <h2>Scottsdale Ranch — 1 bed, 1 bath</h2>
+        <p class="meta">Unit 2A · 720 sq ft · Scottsdale, AZ · available 15 Sep</p>
+        <ul class="feat"><li>Ground floor</li><li>Private patio</li><li>Fitness room</li></ul>
+      </div>
+      <div class="price"><b>$1,540</b><small>per month</small><br><a class="apply" href="#">Apply</a></div>
+    </article>
+
+    <article class="listing">
+      <div>
+        <h2>Desert Ridge Villas — 3 bed, 2 bath</h2>
+        <p class="meta">Unit 11 · 1,460 sq ft · Phoenix, AZ · available 1 Oct</p>
+        <ul class="feat"><li>Two-car garage</li><li>Corner lot</li><li>Community park</li></ul>
+      </div>
+      <div class="price"><b>$2,350</b><small>per month</small><br><a class="apply" href="#">Apply</a></div>
+    </article>
+
+    <article class="listing">
+      <div>
+        <h2>Chandler Heights — 2 bed, 1 bath</h2>
+        <p class="meta">Unit 5D · 940 sq ft · Chandler, AZ · available now</p>
+        <ul class="feat"><li>Updated kitchen</li><li>Assigned parking</li><li>Storage unit</li></ul>
+      </div>
+      <div class="price"><b>$1,675</b><small>per month</small><br><a class="apply" href="#">Apply</a></div>
+    </article>
+
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <strong>Havenstone Management</strong> · 2140 E Camelback Rd, Suite 210, Phoenix, AZ 85016 · (602) 555-0148<br>
+  Equal Housing Opportunity.
+</div></footer>
+</body>
+</html>

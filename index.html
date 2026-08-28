@@ -3,84 +3,333 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Havenstone Management — Phoenix Property Management</title>
+<title>Havenstone Management — Property management across the Valley</title>
+<meta name="description" content="Havenstone Management operates six residential communities in Phoenix, Scottsdale, Mesa, Chandler and Gilbert. Leasing, maintenance and owner accounting under one roof since 2011.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap">
-<style>
-  :root{--ink:#1B2A33;--muted:#5E7280;--line:#DDE4E8;--paper:#FBFAF8;--sand:#F1EDE6;--brass:#A9743C;--deep:#12333B}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
-  a{color:var(--deep)}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-  header{border-bottom:1px solid var(--line);background:#fff}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  .brand{font-family:"Source Serif 4",Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.01em}
-  .brand span{color:var(--brass)}
-  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
-  nav a{text-decoration:none;color:var(--muted)}
-  nav a:hover{color:var(--ink)}
-  .hero{background:var(--deep);color:#fff;padding:76px 0}
-  .hero h1{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(32px,5vw,50px);line-height:1.1;margin:0 0 16px;font-weight:600;max-width:20ch}
-  .hero p{color:#C6D6DA;font-size:18px;max-width:56ch;margin:0 0 28px}
-  .btn{display:inline-block;background:var(--brass);color:#fff;text-decoration:none;padding:13px 24px;border-radius:3px;font-weight:600;font-size:15px}
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .stats div{background:#fff;padding:26px 22px}
-  .stats b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:30px;font-weight:600}
-  .stats small{color:var(--muted);font-size:14px}
-  section{padding:64px 0}
-  h2{font-family:"Source Serif 4",Georgia,serif;font-size:30px;font-weight:600;margin:0 0 8px}
-  .lede{color:var(--muted);margin:0 0 32px;max-width:60ch}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px}
-  .card h3{margin:0 0 8px;font-size:18px}
-  .card p{margin:0;color:var(--muted);font-size:15px}
-  footer{background:var(--sand);padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<header><div class="wrap"><nav>
-  <div class="brand">Havenstone<span>.</span></div>
-  <ul>
-    <li><a href="vacancies.html">Vacancies (4)</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="#owners">For owners</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav></div></header>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="hv-sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#C6DCE6"/><stop offset=".58" stop-color="#E3DDD1"/><stop offset="1" stop-color="#E9D9C2"/>
+  </linearGradient>
+  <pattern id="hv-win" width="17" height="19" patternUnits="userSpaceOnUse">
+    <rect x="5" y="5" width="7" height="9" fill="#BDD6DE" opacity=".52"/>
+  </pattern>
+  <g id="hv-base">
+    <rect width="400" height="240" fill="url(#hv-sky)"/>
+    <circle cx="326" cy="146" r="30" fill="#F2D9A6" opacity=".62"/>
+    <path d="M0 168 L58 128 L96 152 L146 112 L196 150 L246 126 L300 158 L356 134 L400 156 L400 200 L0 200Z" fill="#A6BCC4" opacity=".5"/>
+    <path d="M0 182 L64 158 L118 176 L178 150 L244 178 L312 156 L400 174 L400 205 L0 205Z" fill="#8CA6B0" opacity=".45"/>
+    <rect y="200" width="400" height="40" fill="#CBC3AE"/>
+    <rect y="200" width="400" height="4" fill="#B9B09A" opacity=".7"/>
+  </g>
+  <g id="hv-palm-l">
+    <rect x="46" y="120" width="5" height="82" fill="#5C6B57"/>
+    <path d="M48 122 C30 108 20 112 14 120 C26 116 38 118 48 128Z M48 122 C66 106 78 110 84 118 C72 114 60 116 48 128Z M48 120 C44 102 50 92 58 88 C54 100 52 110 50 122Z" fill="#3C5B4F"/>
+  </g>
+  <g id="hv-palm-r">
+    <rect x="352" y="132" width="4" height="70" fill="#5C6B57"/>
+    <path d="M354 134 C340 122 332 126 327 133 C337 129 346 131 354 139Z M354 134 C368 120 378 124 383 131 C373 127 364 129 354 139Z" fill="#3C5B4F"/>
+  </g>
 
-<div class="hero"><div class="wrap">
-  <h1>Property management across the Valley, without the guesswork.</h1>
-  <p>Six communities in Scottsdale, Phoenix, Mesa and Chandler. Residents get answers the same day; owners get a close they can read.</p>
-  <a class="btn" href="vacancies.html">See available homes</a>
+  <!-- Camelback Terrace: two-storey courtyard blocks -->
+  <symbol id="sc-camelback" viewBox="0 0 400 240">
+    <use href="#hv-base"/>
+    <g>
+      <rect x="74" y="118" width="112" height="84" fill="#2E4A56"/><rect x="74" y="118" width="112" height="84" fill="url(#hv-win)"/>
+      <rect x="70" y="110" width="120" height="10" fill="#1E333D"/>
+      <rect x="214" y="132" width="102" height="70" fill="#33525F"/><rect x="214" y="132" width="102" height="70" fill="url(#hv-win)"/>
+      <rect x="210" y="124" width="110" height="10" fill="#1E333D"/>
+      <rect x="186" y="164" width="28" height="38" fill="#26414C"/>
+    </g>
+    <use href="#hv-palm-l"/><use href="#hv-palm-r"/>
+  </symbol>
+
+  <!-- Scottsdale Ranch: long garden-style block with breezeway -->
+  <symbol id="sc-scottsdale" viewBox="0 0 400 240">
+    <use href="#hv-base"/>
+    <g>
+      <rect x="52" y="130" width="130" height="72" fill="#2E4A56"/><rect x="52" y="130" width="130" height="72" fill="url(#hv-win)"/>
+      <rect x="218" y="130" width="130" height="72" fill="#2E4A56"/><rect x="218" y="130" width="130" height="72" fill="url(#hv-win)"/>
+      <rect x="48" y="122" width="138" height="10" fill="#1E333D"/>
+      <rect x="214" y="122" width="138" height="10" fill="#1E333D"/>
+      <rect x="182" y="150" width="36" height="52" fill="#223B45"/>
+      <rect x="178" y="142" width="44" height="9" fill="#1E333D"/>
+    </g>
+    <use href="#hv-palm-r"/>
+  </symbol>
+
+  <!-- Desert Ridge Villas: gabled townhome row -->
+  <symbol id="sc-desertridge" viewBox="0 0 400 240">
+    <use href="#hv-base"/>
+    <g fill="#2E4A56">
+      <rect x="46" y="146" width="72" height="56"/><rect x="126" y="138" width="72" height="64"/>
+      <rect x="206" y="146" width="72" height="56"/><rect x="286" y="152" width="68" height="50"/>
+    </g>
+    <g fill="url(#hv-win)">
+      <rect x="46" y="146" width="72" height="56"/><rect x="126" y="138" width="72" height="64"/>
+      <rect x="206" y="146" width="72" height="56"/><rect x="286" y="152" width="68" height="50"/>
+    </g>
+    <g fill="#1E333D">
+      <path d="M40 148 L82 122 L124 148Z"/><path d="M120 140 L162 114 L204 140Z"/>
+      <path d="M200 148 L242 122 L284 148Z"/><path d="M280 154 L320 130 L360 154Z"/>
+    </g>
+    <use href="#hv-palm-l"/>
+  </symbol>
+
+  <!-- Chandler Heights: four-storey mid-rise -->
+  <symbol id="sc-chandler" viewBox="0 0 400 240">
+    <use href="#hv-base"/>
+    <g>
+      <rect x="112" y="72" width="120" height="130" fill="#2E4A56"/><rect x="112" y="72" width="120" height="130" fill="url(#hv-win)"/>
+      <rect x="106" y="64" width="132" height="10" fill="#1E333D"/>
+      <rect x="238" y="128" width="76" height="74" fill="#35545F"/><rect x="238" y="128" width="76" height="74" fill="url(#hv-win)"/>
+      <rect x="234" y="120" width="84" height="9" fill="#1E333D"/>
+      <rect x="152" y="168" width="34" height="34" fill="#223B45"/>
+      <rect x="86" y="150" width="28" height="52" fill="#3B5A66"/>
+    </g>
+    <use href="#hv-palm-r"/>
+  </symbol>
+
+  <!-- Mesa Gateway: duplex pair -->
+  <symbol id="sc-mesa" viewBox="0 0 400 240">
+    <use href="#hv-base"/>
+    <g>
+      <rect x="66" y="140" width="112" height="62" fill="#2E4A56"/><rect x="66" y="140" width="112" height="62" fill="url(#hv-win)"/>
+      <path d="M58 142 L122 108 L186 142Z" fill="#1E333D"/>
+      <rect x="216" y="148" width="106" height="54" fill="#33525F"/><rect x="216" y="148" width="106" height="54" fill="url(#hv-win)"/>
+      <path d="M208 150 L269 120 L330 150Z" fill="#1E333D"/>
+      <rect x="112" y="172" width="24" height="30" fill="#223B45"/>
+      <rect x="256" y="176" width="22" height="26" fill="#223B45"/>
+    </g>
+    <use href="#hv-palm-l"/>
+  </symbol>
+
+  <!-- Ironwood Crossing: detached single-family cluster -->
+  <symbol id="sc-ironwood" viewBox="0 0 400 240">
+    <use href="#hv-base"/>
+    <g>
+      <rect x="40" y="156" width="84" height="46" fill="#33525F"/><rect x="40" y="156" width="84" height="46" fill="url(#hv-win)"/>
+      <path d="M32 158 L82 130 L132 158Z" fill="#1E333D"/>
+      <rect x="146" y="146" width="96" height="56" fill="#2E4A56"/><rect x="146" y="146" width="96" height="56" fill="url(#hv-win)"/>
+      <path d="M138 148 L194 116 L250 148Z" fill="#1E333D"/>
+      <rect x="264" y="160" width="80" height="42" fill="#35545F"/><rect x="264" y="160" width="80" height="42" fill="url(#hv-win)"/>
+      <path d="M256 162 L304 136 L352 162Z" fill="#1E333D"/>
+      <rect x="186" y="176" width="22" height="26" fill="#223B45"/>
+    </g>
+    <use href="#hv-palm-r"/>
+  </symbol>
+</defs>
+</svg>
+
+<div class="utility"><div class="shell">
+  <span>Serving Phoenix, Scottsdale, Mesa, Chandler &amp; Gilbert</span>
+  <span class="utility-links">
+    <a href="tel:+16025550148">(602) 555-0148</a>
+    <a href="#contact">Resident portal</a>
+    <a href="owners.html">Owner login</a>
+  </span>
 </div></div>
 
-<div class="stats wrap" style="max-width:1040px">
-  <div><b>166</b><small>units under management</small></div>
-  <div><b>6</b><small>communities</small></div>
-  <div><b>&lt;24h</b><small>median maintenance response</small></div>
-  <div><b>2011</b><small>managing Valley homes since</small></div>
+<header class="masthead"><div class="shell">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">Havenstone</span>
+    <span class="brand-sub">Management</span>
+  </a>
+  <nav aria-label="Main"><ul class="nav">
+    <li><a href="vacancies.html">Vacancies (4)</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="owners.html">For owners</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a class="btn btn-quiet btn-sm" href="vacancies.html">See available homes</a>
+</div></header>
+
+<div class="hero">
+  <svg class="hero-art" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 168 L150 96 L268 148 L392 72 L520 140 L668 104 L812 158 L960 108 L1110 152 L1266 100 L1440 150 L1440 300 L0 300Z" fill="#16303C"/>
+    <path d="M0 208 L168 160 L318 198 L468 152 L636 200 L800 164 L980 206 L1150 170 L1310 204 L1440 182 L1440 300 L0 300Z" fill="#1B3B49"/>
+    <path d="M0 248 L200 220 L400 246 L610 216 L840 250 L1080 222 L1300 248 L1440 232 L1440 300 L0 300Z" fill="#204656"/>
+  </svg>
+  <div class="shell">
+    <div class="hero-copy">
+      <p class="eyebrow">Managing Valley homes since 2011</p>
+      <h1>Six communities, run like we own them.</h1>
+      <p class="hero-lede">Residents get an answer the same day. Owners get a month-end close they can actually read — with the variances explained, not buried.</p>
+      <div class="hero-actions">
+        <a class="btn" href="vacancies.html">See available homes</a>
+        <a class="btn btn-ghost" href="owners.html">Request an owner proposal</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-<section><div class="wrap">
-  <h2>What we handle</h2>
-  <p class="lede">One team for leasing, maintenance and the monthly accounting close — so nothing sits between two inboxes.</p>
-  <div class="cards">
-    <div class="card"><h3>Leasing &amp; turnover</h3><p>Listing, screening, move-in and move-out inspections with a documented condition report on every unit.</p></div>
-    <div class="card"><h3>Maintenance</h3><p>Vetted local vendors, habitability issues dispatched immediately, and a repair history kept per unit.</p></div>
-    <div class="card"><h3>Owner reporting</h3><p>A month-end close per property, on a published schedule, with variances explained rather than buried.</p></div>
+<div class="shell statband"><div class="statband-inner">
+  <div class="stat"><b>166</b><span>homes under management</span></div>
+  <div class="stat"><b>6</b><span>communities across the Valley</span></div>
+  <div class="stat"><b>&lt;24h</b><span>median maintenance response</span></div>
+  <div class="stat"><b>2011</b><span>managing Arizona rentals since</span></div>
+</div></div>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <h2>The portfolio</h2>
+      <p>Everything we manage, we manage end to end — no split between the leasing office and the accounting desk.</p>
+    </div>
+    <div class="portfolio">
+
+      <article class="prop">
+        <svg class="prop-art" viewBox="0 0 400 240" role="img" aria-label="Illustration of Camelback Terrace"><use href="#sc-camelback"/></svg>
+        <div class="prop-body">
+          <h3>Camelback Terrace</h3>
+          <p class="prop-loc">Phoenix, AZ 85016</p>
+          <p class="prop-note">Two-storey courtyard blocks a short walk off Camelback Road. Covered parking, pool, in-unit laundry.</p>
+          <div class="prop-foot"><span>Homes</span><b>38</b></div>
+        </div>
+      </article>
+
+      <article class="prop">
+        <svg class="prop-art" viewBox="0 0 400 240" role="img" aria-label="Illustration of Scottsdale Ranch"><use href="#sc-scottsdale"/></svg>
+        <div class="prop-body">
+          <h3>Scottsdale Ranch</h3>
+          <p class="prop-loc">Scottsdale, AZ 85258</p>
+          <p class="prop-note">Garden-style singles and one-bedrooms around a shared courtyard, with a fitness room on site.</p>
+          <div class="prop-foot"><span>Homes</span><b>24</b></div>
+        </div>
+      </article>
+
+      <article class="prop">
+        <svg class="prop-art" viewBox="0 0 400 240" role="img" aria-label="Illustration of Desert Ridge Villas"><use href="#sc-desertridge"/></svg>
+        <div class="prop-body">
+          <h3>Desert Ridge Villas</h3>
+          <p class="prop-loc">Phoenix, AZ 85050</p>
+          <p class="prop-note">Three-bedroom townhomes with private garages, built around a community park and ramada.</p>
+          <div class="prop-foot"><span>Homes</span><b>32</b></div>
+        </div>
+      </article>
+
+      <article class="prop">
+        <svg class="prop-art" viewBox="0 0 400 240" role="img" aria-label="Illustration of Chandler Heights"><use href="#sc-chandler"/></svg>
+        <div class="prop-body">
+          <h3>Chandler Heights</h3>
+          <p class="prop-loc">Chandler, AZ 85249</p>
+          <p class="prop-note">Our only mid-rise. Secure entry, elevator access, storage lockers on every floor.</p>
+          <div class="prop-foot"><span>Homes</span><b>28</b></div>
+        </div>
+      </article>
+
+      <article class="prop">
+        <svg class="prop-art" viewBox="0 0 400 240" role="img" aria-label="Illustration of Mesa Gateway"><use href="#sc-mesa"/></svg>
+        <div class="prop-body">
+          <h3>Mesa Gateway</h3>
+          <p class="prop-loc">Mesa, AZ 85212</p>
+          <p class="prop-note">Duplex homes on generous lots near the Gateway corridor. Yard care included in rent.</p>
+          <div class="prop-foot"><span>Homes</span><b>26</b></div>
+        </div>
+      </article>
+
+      <article class="prop">
+        <svg class="prop-art" viewBox="0 0 400 240" role="img" aria-label="Illustration of Ironwood Crossing"><use href="#sc-ironwood"/></svg>
+        <div class="prop-body">
+          <h3>Ironwood Crossing</h3>
+          <p class="prop-loc">Gilbert, AZ 85298</p>
+          <p class="prop-note">Detached single-family rentals, most of them three-bed, on a single quiet loop.</p>
+          <div class="prop-foot"><span>Homes</span><b>18</b></div>
+        </div>
+      </article>
+
+    </div>
   </div>
-</div></section>
+</section>
 
-<section id="owners" style="background:var(--sand)"><div class="wrap">
-  <h2>For owners</h2>
-  <p class="lede">Statements by the fifth working day. Application fee is $45 per adult applicant, collected at application and non-refundable.</p>
-  <a class="btn" href="#contact">Request a management proposal</a>
-</div></section>
+<hr class="rule">
 
-<footer id="contact"><div class="wrap">
-  <strong>Havenstone Management</strong><br>
-  2140 E Camelback Rd, Suite 210, Phoenix, AZ 85016 · (602) 555-0148 · hello@havenstonemgmt.com<br><br>
-  Equal Housing Opportunity. Arizona Department of Real Estate licence #HM-441802.
+<section class="section">
+  <div class="shell split">
+    <div class="split-head">
+      <h2>What we handle</h2>
+      <p>One team for leasing, maintenance and the monthly accounting close — so nothing sits waiting between two inboxes.</p>
+    </div>
+    <ul class="services">
+      <li class="service">
+        <h3>Leasing &amp; applications</h3>
+        <p>Listing, showings and screening, with applications reviewed in the order received. The application fee is $45 per adult applicant, collected up front and non-refundable.</p>
+      </li>
+      <li class="service">
+        <h3>Maintenance &amp; vendors</h3>
+        <p>Vetted local trades on standing rates. Anything touching cooling, heat, water or the security of a home is dispatched the same day, weekends included, and every unit keeps its own repair history.</p>
+      </li>
+      <li class="service">
+        <h3>Owner accounting</h3>
+        <p>A full month-end close per property on a published schedule — bank and deposit reconciliations, AR and AP, accruals, then a trial balance reviewed before anything is locked.</p>
+      </li>
+      <li class="service">
+        <h3>Move-outs &amp; deposits</h3>
+        <p>A documented room-by-room inspection with photographs. Normal wear and tear is never charged, chargeable items are itemised against a photo, and the balance returns within 14 days of possession.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="shell">
+    <figure class="quote">
+      <blockquote>&ldquo;I owned four doors with two other managers before this. Havenstone is the first one where I have never had to ask what a number on the statement means.&rdquo;</blockquote>
+      <figcaption><b>R. Alvarez</b> — owner, Desert Ridge Villas &amp; Ironwood Crossing · with Havenstone since 2019</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="owners">
+  <div class="shell">
+    <div>
+      <h2>Thinking about handing over the keys?</h2>
+      <p>Send us the address and last year's statements. We will come back with a written proposal — projected rent, the work a turn would need, and what our fee actually covers — usually inside three business days.</p>
+    </div>
+    <div class="band-actions">
+      <a class="btn" href="owners.html">See owner services &amp; fees</a>
+      <a class="btn btn-ghost" href="tel:+16025550148">Call (602) 555-0148</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contact"><div class="shell">
+  <div class="footer-cols">
+    <div class="footer-brand">
+      <span class="brand-mark">Havenstone</span>
+      <p>Residential property management across the Phoenix metropolitan area. Locally owned, locally staffed.</p>
+    </div>
+    <div>
+      <h4>Office</h4>
+      <ul>
+        <li>2140 E Camelback Rd, Suite 210<br>Phoenix, AZ 85016</li>
+        <li><a href="tel:+16025550148">(602) 555-0148</a></li>
+        <li><a href="mailto:hello@havenstonemgmt.com">hello@havenstonemgmt.com</a></li>
+        <li>Mon&ndash;Fri, 8.30am&ndash;5.30pm</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="vacancies.html">Available homes</a></li>
+        <li><a href="faq.html">Resident FAQ</a></li>
+        <li><a href="owners.html">For owners</a></li>
+        <li><a href="tel:+16025550148">Report an emergency</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <span class="eho">
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.4 15 6.6h-2v8H3v-8H1L8 1.4Z" fill="none" stroke="#7E97A4" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      Equal Housing Opportunity
+    </span>
+    <span>Arizona Department of Real Estate licence #HM-441802 · &copy; 2026 Havenstone Management, LLC</span>
+  </div>
 </div></footer>
 </body>
 </html>
